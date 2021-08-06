@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		9C75883D26B97B2B002FCF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75883C26B97B2B002FCF39 /* AppDelegate.swift */; };
 		9C75883F26B97B2B002FCF39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75883E26B97B2B002FCF39 /* SceneDelegate.swift */; };
-		9C75884126B97B2B002FCF39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75884026B97B2B002FCF39 /* ViewController.swift */; };
+		9C75884126B97B2B002FCF39 /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75884026B97B2B002FCF39 /* EditImageViewController.swift */; };
 		9C75884426B97B2C002FCF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C75884226B97B2C002FCF39 /* Main.storyboard */; };
 		9C75884626B97B34002FCF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C75884526B97B34002FCF39 /* Assets.xcassets */; };
 		9C75884926B97B35002FCF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C75884726B97B35002FCF39 /* LaunchScreen.storyboard */; };
+		9C75887426BADC34002FCF39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75887326BADC34002FCF39 /* HomeViewController.swift */; };
+		9C75887A26BB7BE8002FCF39 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75887926BB7BE8002FCF39 /* CameraController.swift */; };
+		9C75887C26BB7F26002FCF39 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C75887B26BB7F26002FCF39 /* CameraViewController.swift */; };
+		9CFBB92E26BC362F00A3A5F0 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB92D26BC362F00A3A5F0 /* Ext+UIViewController.swift */; };
+		9CFBB93026BD309900A3A5F0 /* FilterPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB92F26BD309900A3A5F0 /* FilterPickerViewController.swift */; };
+		9CFBB93226BD30AF00A3A5F0 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB93126BD30AF00A3A5F0 /* FilterViewCell.swift */; };
+		9CFBB93426BD5AC400A3A5F0 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFBB93326BD5AC400A3A5F0 /* PhotoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C75883926B97B2B002FCF39 /* DemoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C75883C26B97B2B002FCF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C75883E26B97B2B002FCF39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C75884026B97B2B002FCF39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C75884026B97B2B002FCF39 /* EditImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
 		9C75884326B97B2C002FCF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C75884526B97B34002FCF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C75884826B97B35002FCF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C75884A26B97B35002FCF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C75887326BADC34002FCF39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9C75887926BB7BE8002FCF39 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		9C75887B26BB7F26002FCF39 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		9CFBB92D26BC362F00A3A5F0 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
+		9CFBB92F26BD309900A3A5F0 /* FilterPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPickerViewController.swift; sourceTree = "<group>"; };
+		9CFBB93126BD30AF00A3A5F0 /* FilterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		9CFBB93326BD5AC400A3A5F0 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +72,18 @@
 			children = (
 				9C75883C26B97B2B002FCF39 /* AppDelegate.swift */,
 				9C75883E26B97B2B002FCF39 /* SceneDelegate.swift */,
-				9C75884026B97B2B002FCF39 /* ViewController.swift */,
+				9C75884026B97B2B002FCF39 /* EditImageViewController.swift */,
 				9C75884226B97B2C002FCF39 /* Main.storyboard */,
 				9C75884526B97B34002FCF39 /* Assets.xcassets */,
 				9C75884726B97B35002FCF39 /* LaunchScreen.storyboard */,
 				9C75884A26B97B35002FCF39 /* Info.plist */,
+				9C75887326BADC34002FCF39 /* HomeViewController.swift */,
+				9C75887926BB7BE8002FCF39 /* CameraController.swift */,
+				9C75887B26BB7F26002FCF39 /* CameraViewController.swift */,
+				9CFBB92D26BC362F00A3A5F0 /* Ext+UIViewController.swift */,
+				9CFBB92F26BD309900A3A5F0 /* FilterPickerViewController.swift */,
+				9CFBB93126BD30AF00A3A5F0 /* FilterViewCell.swift */,
+				9CFBB93326BD5AC400A3A5F0 /* PhotoManager.swift */,
 			);
 			path = DemoFilter;
 			sourceTree = "<group>";
@@ -138,9 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C75884126B97B2B002FCF39 /* ViewController.swift in Sources */,
+				9C75884126B97B2B002FCF39 /* EditImageViewController.swift in Sources */,
 				9C75883D26B97B2B002FCF39 /* AppDelegate.swift in Sources */,
 				9C75883F26B97B2B002FCF39 /* SceneDelegate.swift in Sources */,
+				9CFBB93226BD30AF00A3A5F0 /* FilterViewCell.swift in Sources */,
+				9C75887426BADC34002FCF39 /* HomeViewController.swift in Sources */,
+				9CFBB93026BD309900A3A5F0 /* FilterPickerViewController.swift in Sources */,
+				9CFBB92E26BC362F00A3A5F0 /* Ext+UIViewController.swift in Sources */,
+				9C75887A26BB7BE8002FCF39 /* CameraController.swift in Sources */,
+				9CFBB93426BD5AC400A3A5F0 /* PhotoManager.swift in Sources */,
+				9C75887C26BB7F26002FCF39 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +320,13 @@
 				DEVELOPMENT_TEAM = 5K2D8EVZ5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoFilter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "讓您可編輯及發佈相機照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,11 +350,13 @@
 				DEVELOPMENT_TEAM = 5K2D8EVZ5V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoFilter/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "讓您可編輯及發佈相機照片";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
