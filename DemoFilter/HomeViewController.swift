@@ -10,7 +10,7 @@ import Photos
 
 class HomeViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    @IBOutlet weak var photoImageView: UIImageView!
+    var selectedImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        photoImageView.image = info[.originalImage] as? UIImage
+        selectedImage = info[.originalImage] as? UIImage
             //回到之前的頁面
         picker.dismiss(animated: true, completion: {
             self.performSegue(withIdentifier: "goEditPhoto", sender: nil)
@@ -45,7 +45,7 @@ class HomeViewController: UIViewController,UINavigationControllerDelegate, UIIma
     
     @IBSegueAction func goEditPhoto(_ coder: NSCoder) -> EditImageViewController? {
         
-        return EditImageViewController(coder: coder, image: self.photoImageView.image!)
+        return EditImageViewController(coder: coder, image: selectedImage!)
     }
     
     

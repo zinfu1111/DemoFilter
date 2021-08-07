@@ -25,6 +25,25 @@ let tryAgainSound = SystemSoundID(1102)
 // 'Failed' feedback (three sequential strong booms)
 let failedSound = SystemSoundID(1107)
 
+extension UIDevice {
+    
+    static func pop(){
+        AudioServicesPlaySystemSound(popSound)
+    }
+    
+    static func peek() {
+        AudioServicesPlaySystemSound(peekSound)
+    }
+    
+    static func cancelled() {
+        AudioServicesPlaySystemSound(cancelledSound)
+    }
+    
+    static func failed() {
+        AudioServicesPlaySystemSound(failedSound)
+    }
+}
+
 extension UIViewController {
     
     func showAlert(title:String?, msg:String?, checkHandler:((UIAlertAction) -> Void)? = nil,cancleHandler:((UIAlertAction) -> Void)? = nil) {
@@ -43,24 +62,5 @@ extension UIViewController {
             
         }
         
-    }
-}
-
-extension UIDevice {
-    
-    static func pop(){
-        AudioServicesPlaySystemSound(popSound)
-    }
-    
-    static func peek() {
-        AudioServicesPlaySystemSound(peekSound)
-    }
-    
-    static func cancelled() {
-        AudioServicesPlaySystemSound(cancelledSound)
-    }
-    
-    static func failed() {
-        AudioServicesPlaySystemSound(failedSound)
     }
 }
