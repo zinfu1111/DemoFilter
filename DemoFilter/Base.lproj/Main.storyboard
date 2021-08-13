@@ -116,7 +116,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="DFs-mx-j9T"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goEditPhoto" destinationCreationSelector="goEditPhoto:" id="pgq-3m-MBt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goEditPhoto" destinationCreationSelector="goEditPhoto:" modalPresentationStyle="fullScreen" id="pgq-3m-MBt"/>
                         <segue destination="3dP-wa-YDT" kind="presentation" identifier="goTakePhoto" destinationCreationSelector="goTakePhoto:" modalPresentationStyle="fullScreen" id="8Fb-Nw-Fcd"/>
                         <segue destination="WSl-NJ-LrS" kind="show" id="R79-gZ-LzK"/>
                     </connections>
@@ -235,23 +235,11 @@
             <objects>
                 <viewController storyboardIdentifier="EditImageViewController" id="BYZ-38-t0r" customClass="EditImageViewController" customModule="DemoFilter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-KY-7ye">
-                                <rect key="frame" x="321" y="20" width="34" height="38.5"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="square.and.arrow.up" catalog="system"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4p-Xb-zGd"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6a-u0-LZk">
-                                <rect key="frame" x="0.0" y="522" width="375" height="125"/>
+                                <rect key="frame" x="0.0" y="542" width="375" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="DEa-Ba-Trp"/>
                                 </constraints>
@@ -260,56 +248,206 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oq-Da-0II">
-                                <rect key="frame" x="0.0" y="136" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zgH-sC-1De">
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgH-sC-1De">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zgH-sC-1De" secondAttribute="height" multiplier="1:1" id="7ho-aI-DX8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3C4-g1-jmj" appends="YES" id="cyL-BR-AzL"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="zgH-sC-1De" firstAttribute="height" secondItem="2oq-Da-0II" secondAttribute="height" id="1xd-cx-3Sq"/>
                                     <constraint firstAttribute="width" secondItem="2oq-Da-0II" secondAttribute="height" multiplier="1:1" id="8ZJ-kL-wPF"/>
+                                    <constraint firstItem="zgH-sC-1De" firstAttribute="centerX" secondItem="2oq-Da-0II" secondAttribute="centerX" id="V65-AT-VwH"/>
+                                    <constraint firstItem="zgH-sC-1De" firstAttribute="centerY" secondItem="2oq-Da-0II" secondAttribute="centerY" id="VLI-qg-V3f"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvN-hb-TX6">
-                                <rect key="frame" x="20" y="20" width="39" height="38.5"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="scribble.variable" catalog="system"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="showColorView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUF-nW-34u"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-Q1-x0U">
+                                <rect key="frame" x="0.0" y="110" width="375" height="36"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-TW-hlu">
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRq-U5-33F">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="原圖">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGx-qW-NqJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TH5-Jo-ntK">
+                                                <rect key="frame" x="72" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="正方形">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVD-pf-BCT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-Ia-aaJ">
+                                                <rect key="frame" x="144" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="16:9">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1n-bR-Gr8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pn-lM-s3Z">
+                                                <rect key="frame" x="216" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="10:8">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yF-LI-yFY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-7e-uJu">
+                                                <rect key="frame" x="288" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7:5">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joU-zj-aVh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJ0-8W-ho7">
+                                                <rect key="frame" x="360" y="0.0" width="62" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4:3">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0F-6W-dyw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CPD-TW-hlu" firstAttribute="top" secondItem="jD1-Iu-OYk" secondAttribute="top" id="HQa-43-Scp"/>
+                                    <constraint firstItem="CPD-TW-hlu" firstAttribute="trailing" secondItem="jD1-Iu-OYk" secondAttribute="trailing" id="KUy-Qy-Sn7"/>
+                                    <constraint firstItem="CPD-TW-hlu" firstAttribute="leading" secondItem="jD1-Iu-OYk" secondAttribute="leading" id="LCw-UQ-O9o"/>
+                                    <constraint firstItem="CPD-TW-hlu" firstAttribute="bottom" secondItem="jD1-Iu-OYk" secondAttribute="bottom" id="ah5-FF-Bar"/>
+                                    <constraint firstAttribute="height" secondItem="CPD-TW-hlu" secondAttribute="height" id="fRe-Va-Jh5"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jD1-Iu-OYk"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zUB-B2-zXU"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ASV-Ev-lr6">
+                                <rect key="frame" x="268" y="20" width="87" height="35.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvN-hb-TX6">
+                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="35.5"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="scribble.variable" catalog="system"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showColorView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUF-nW-34u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjc-Xy-TKc">
+                                        <rect key="frame" x="48.5" y="0.0" width="38.5" height="35.5"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="xmark.app.fill" catalog="system"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeEdit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6v-7Q-m3t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ahd-8y-xHd">
+                                <rect key="frame" x="20" y="19" width="87" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcq-bc-vX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="42.5" height="38"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="systemIndigoColor"/>
+                                            <imageReference key="image" image="arrow.left.and.right.righttriangle.left.righttriangle.right" catalog="system"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mirrorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smy-qI-qxt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb0-gr-Kgx">
+                                        <rect key="frame" x="52.5" y="0.0" width="34.5" height="38"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <color key="titleColor" systemColor="systemIndigoColor"/>
+                                            <imageReference key="image" image="rotate.left" catalog="system"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="roateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4k-ym-3Yw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.74509803919999995" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ahd-8y-xHd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Xb-wO-N6R"/>
+                            <constraint firstItem="ASV-Ev-lr6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="995-Ww-AC4"/>
                             <constraint firstItem="2oq-Da-0II" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IgX-X7-OLK"/>
-                            <constraint firstItem="IvN-hb-TX6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="TmM-Tf-FLy"/>
-                            <constraint firstItem="IvN-hb-TX6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VJp-3w-yzJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pea-Q1-x0U" secondAttribute="trailing" id="RTU-Ny-8Ty"/>
+                            <constraint firstItem="Pea-Q1-x0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tib-n6-1lX"/>
+                            <constraint firstItem="Pea-Q1-x0U" firstAttribute="bottom" secondItem="2oq-Da-0II" secondAttribute="top" id="UI5-sP-o7x"/>
                             <constraint firstItem="2oq-Da-0II" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="W41-dl-ala"/>
                             <constraint firstItem="Y6a-u0-LZk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XDF-ua-uLM"/>
-                            <constraint firstItem="Bfh-KY-7ye" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cGi-TH-IJO"/>
+                            <constraint firstItem="Ahd-8y-xHd" firstAttribute="centerY" secondItem="ASV-Ev-lr6" secondAttribute="centerY" id="Yv3-mZ-EIn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ASV-Ev-lr6" secondAttribute="trailing" constant="20" id="aax-bH-Pw6"/>
                             <constraint firstItem="2oq-Da-0II" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgM-b9-9Ad"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bfh-KY-7ye" secondAttribute="trailing" constant="20" id="jlX-EY-vUb"/>
                             <constraint firstItem="Y6a-u0-LZk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uT5-TW-THg"/>
-                            <constraint firstItem="IvN-hb-TX6" firstAttribute="centerY" secondItem="Bfh-KY-7ye" secondAttribute="centerY" id="xnG-0h-ld5"/>
                             <constraint firstItem="Y6a-u0-LZk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yei-X4-lHc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pMU-5C-YDr"/>
                     <connections>
                         <outlet property="imageBackgroundView" destination="2oq-Da-0II" id="FA0-Va-2L3"/>
+                        <outlet property="imageScaleConstraint" destination="7ho-aI-DX8" id="od2-Mf-rMO"/>
                         <outlet property="imageView" destination="zgH-sC-1De" id="KGg-Wv-p9m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.29999999999999999" id="3C4-g1-jmj">
+                    <connections>
+                        <action selector="savePhoto:" destination="BYZ-38-t0r" id="8rj-r5-hnK"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1614" y="115"/>
+            <point key="canvasLocation" x="1613.5999999999999" y="114.69265367316342"/>
         </scene>
         <!--Filter Picker View Controller-->
         <scene sceneID="OPO-WB-NVo">
@@ -520,20 +658,22 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kAh-4x-MKl"/>
+        <segue reference="pgq-3m-MBt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="550" height="729"/>
         <image name="Image-1" width="186" height="270"/>
+        <image name="arrow.left.and.right.righttriangle.left.righttriangle.right" catalog="system" width="128" height="112"/>
         <image name="bolt.slash.fill" catalog="system" width="98" height="128"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="camera.rotate.fill" catalog="system" width="128" height="94"/>
         <image name="greetingcard" catalog="system" width="107" height="128"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="rotate.left" catalog="system" width="118" height="128"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="xmark.app.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
