@@ -36,14 +36,12 @@ class EditImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         setupImageView()
+        
     }
     
     func setupImageView() {
+        //計算原圖尺寸比例
         let scale = imageView.frame.height/originImage.size.height
         let newWidth = originImage.size.width * scale
         let newScale = newWidth/imageView.frame.height
@@ -51,6 +49,7 @@ class EditImageViewController: UIViewController {
         originSize.height = imageView.frame.height
         originSize.width = newWidth
         
+        //將新的比例設定到imageScaleConstraint
         imageScaleConstraint = imageScaleConstraint.setMultiplier(multiplier: newScale)
         imageView.image = originImage
     }
@@ -123,7 +122,7 @@ extension EditImageViewController {
     }
     
     //MARK: 分享圖片
-    @IBAction func savePhoto(_ sender: UIButton) {
+    @IBAction func savePhoto(_ sender: Any) {
         let renderer = UIGraphicsImageRenderer(size: imageBackgroundView.bounds.size)
         let image = renderer.image(actions: { (context) in
             imageBackgroundView.drawHierarchy(in: imageBackgroundView.bounds, afterScreenUpdates: true)

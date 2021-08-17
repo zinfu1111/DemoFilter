@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F54-29-mag">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F54-29-mag">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -384,7 +383,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ahd-8y-xHd">
-                                <rect key="frame" x="20" y="19" width="87" height="38"/>
+                                <rect key="frame" x="20" y="19" width="90" height="38"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcq-bc-vX5">
                                         <rect key="frame" x="0.0" y="0.0" width="42.5" height="38"/>
@@ -400,7 +399,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb0-gr-Kgx">
-                                        <rect key="frame" x="52.5" y="0.0" width="34.5" height="38"/>
+                                        <rect key="frame" x="52.5" y="0.0" width="37.5" height="38"/>
                                         <color key="tintColor" systemColor="systemIndigoColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal">
@@ -528,30 +527,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="163-vF-bgW">
-                                <rect key="frame" x="150" y="542" width="75" height="75"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-uR-3sS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gT-At-7L9">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="0.20000000000000001" green="0.74509803919999995" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="camera.circle" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="default"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="captureAction:" destination="3dP-wa-YDT" eventType="touchUpInside" id="4ud-Jm-5fE"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-vB-FQg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="163-vF-bgW" secondAttribute="height" multiplier="1:1" id="T2B-8D-nzC"/>
-                                    <constraint firstItem="7gT-At-7L9" firstAttribute="top" secondItem="163-vF-bgW" secondAttribute="top" id="Zm3-LC-Kai"/>
-                                    <constraint firstAttribute="trailing" secondItem="7gT-At-7L9" secondAttribute="trailing" id="fZj-9w-LiK"/>
-                                    <constraint firstAttribute="bottom" secondItem="7gT-At-7L9" secondAttribute="bottom" id="sVw-OX-E47"/>
-                                    <constraint firstItem="7gT-At-7L9" firstAttribute="leading" secondItem="163-vF-bgW" secondAttribute="leading" id="yap-LH-wu2"/>
+                                    <constraint firstItem="Lk0-vB-FQg" firstAttribute="top" secondItem="2Mv-uR-3sS" secondAttribute="top" id="3ZS-by-Ysg"/>
+                                    <constraint firstItem="Lk0-vB-FQg" firstAttribute="leading" secondItem="2Mv-uR-3sS" secondAttribute="leading" id="As5-s3-X2g"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lk0-vB-FQg" secondAttribute="bottom" id="GEb-uW-srq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lk0-vB-FQg" secondAttribute="trailing" id="hVf-Ib-de7"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75t-zj-2du">
@@ -599,19 +587,30 @@
                                     <action selector="toggleFlash:" destination="3dP-wa-YDT" eventType="touchUpInside" id="rnC-I1-GiU"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-uR-3sS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="163-vF-bgW">
+                                <rect key="frame" x="150" y="542" width="75" height="75"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-vB-FQg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gT-At-7L9">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.20000000000000001" green="0.74509803919999995" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="camera.circle" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureAction:" destination="3dP-wa-YDT" eventType="touchUpInside" id="4ud-Jm-5fE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Lk0-vB-FQg" firstAttribute="top" secondItem="2Mv-uR-3sS" secondAttribute="top" id="3ZS-by-Ysg"/>
-                                    <constraint firstItem="Lk0-vB-FQg" firstAttribute="leading" secondItem="2Mv-uR-3sS" secondAttribute="leading" id="As5-s3-X2g"/>
-                                    <constraint firstAttribute="bottom" secondItem="Lk0-vB-FQg" secondAttribute="bottom" id="GEb-uW-srq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lk0-vB-FQg" secondAttribute="trailing" id="hVf-Ib-de7"/>
+                                    <constraint firstAttribute="width" secondItem="163-vF-bgW" secondAttribute="height" multiplier="1:1" id="T2B-8D-nzC"/>
+                                    <constraint firstItem="7gT-At-7L9" firstAttribute="top" secondItem="163-vF-bgW" secondAttribute="top" id="Zm3-LC-Kai"/>
+                                    <constraint firstAttribute="trailing" secondItem="7gT-At-7L9" secondAttribute="trailing" id="fZj-9w-LiK"/>
+                                    <constraint firstAttribute="bottom" secondItem="7gT-At-7L9" secondAttribute="bottom" id="sVw-OX-E47"/>
+                                    <constraint firstItem="7gT-At-7L9" firstAttribute="leading" secondItem="163-vF-bgW" secondAttribute="leading" id="yap-LH-wu2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -670,7 +669,7 @@
         <image name="camera.rotate.fill" catalog="system" width="128" height="94"/>
         <image name="greetingcard" catalog="system" width="107" height="128"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
-        <image name="rotate.left" catalog="system" width="118" height="128"/>
+        <image name="rotate.left" catalog="system" width="128" height="124"/>
         <image name="scribble.variable" catalog="system" width="128" height="118"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="xmark.app.fill" catalog="system" width="128" height="114"/>
